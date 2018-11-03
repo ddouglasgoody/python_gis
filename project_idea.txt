@@ -1,0 +1,11 @@
+street addresses (csv)
+    geocode to lat/lng
+    move into arcgis
+    create shapefile (points)
+import MapPLUTO data (either locally or from online)
+    select by location (overlap with points)
+    export MapPLUTO as shapefile and csv 
+
+    * decide which columns to export?
+    * can multiple layers be accessed? 
+        (i.e., MapPLUTO, DOF tax, DOB)    
