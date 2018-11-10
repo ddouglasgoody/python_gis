@@ -1,0 +1,12 @@
+>>> mxd = arcpy.mapping.MapDocument("CURRENT")
+>>> arcpy.mapping.ExportToJPEG(mxd, r'C:\Users\dgoodma7\Documents\lpc_data\test.jpeg')
+>>> arcpy.SelectLayerByAttribute_management("nybb", "NEW_SELECTION", """ "BoroName" = 'Manhattan' """)
+<Result 'nybb'>
+>>> map_df = arcpy.mapping.ListDataFrames(mxd, "Layers")[0]
+>>> map_df.zoomToSelectedFeatures()
+>>> arcpy.mapping.ExportToPDF(mxd, r'C:\Users\dgoodma7\Documents\lpc_data\exports\test.pdf')
+>>> arcpy.SelectLayerByAttribute_management("nybb", "NEW_SELECTION", """ "BoroName" = 'Queens' """)
+<Result 'nybb'>
+>>> map_df.zoomToSelectedFeatures()
+>>> arcpy.mapping.ExportToPDF(mxd, r'C:\Users\dgoodma7\Documents\lpc_data\exports\test2.pdf')
+>>> 
